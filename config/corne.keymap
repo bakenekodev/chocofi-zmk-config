@@ -14,16 +14,27 @@
 
     combos { compatible = "zmk,combos"; };
 
+    behaviors {
+        colon: colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COLON";
+            bindings = <&kp COLON>, <&kp SEMI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             label = "DEF";
             bindings = <
-  &kp LS(SEMICOLON)  &kp COMMA  &kp PERIOD   &kp P        &kp Y      &kp F      &kp G          &kp C         &kp R  &kp L
-  &kp A              &kp O      &kp E        &kp U        &kp I      &kp D      &kp H          &kp T         &kp N  &kp S
-  &kp SQT            &kp Q      &kp J        &kp K        &kp X      &kp B      &kp M          &kp W         &kp V  &kp Z
-                                &lt 2 SPACE  &lt 1 SPACE  &kp TAB    &kp ENTER  &kp BACKSPACE  &lt 3 DELETE
+  &colon   &kp COMMA  &kp PERIOD   &kp P        &kp Y        &kp F      &kp G          &kp C         &kp R  &kp L
+  &kp A    &kp O      &kp E        &kp U        &kp I        &kp D      &kp H          &kp T         &kp N  &kp S
+  &kp SQT  &kp Q      &kp J        &kp K        &kp X        &kp B      &kp M          &kp W         &kp V  &kp Z
+                      &lt 4 SPACE  &lt 1 SPACE  &lt 2 TAB    &kp ENTER  &kp BACKSPACE  &lt 5 DELETE
             >;
         };
 
@@ -33,6 +44,24 @@
   &trans  &trans  &trans  &trans  &trans    &trans        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans
   &trans  &trans  &trans  &trans  &trans    &kp NUMBER_1  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
                   &trans  &trans  &trans    &trans        &kp N0        &kp PERIOD
+            >;
+        };
+
+        symbols {
+            bindings = <
+  &trans    &trans    &trans     &trans     &trans    &kp LS(LPAR)  &kp AMPERSAND   &kp ASTERISK   &kp LS(RPAR)   &trans
+  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp LBKT      &kp LS(DOLLAR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp RBKT
+  &trans    &trans    &trans     &trans     &trans    &kp LS(LBRC)  &kp LS(EXCL)    &kp LS(AT)     &kp LS(POUND)  &kp LS(RBRC)
+                      &trans     &trans     &trans    &kp EQUAL     &kp UNDER       &kp MINUS
+            >;
+        };
+
+        movement {
+            bindings = <
+  &trans  &kp HOME        &kp UP_ARROW  &kp END    &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans          &trans        &trans     &trans    &trans  &trans  &trans  &trans  &trans
+                          &trans        &trans     &trans    &trans  &trans  &trans
             >;
         };
 
