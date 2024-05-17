@@ -12,7 +12,14 @@
 / {
     chosen { zmk,matrix_transform = &five_column_transform; };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        other {
+            bindings = <&mo 7>;
+            key-positions = <34 35>;
+        };
+    };
 
     behaviors {
         colon: colon {
@@ -31,10 +38,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-  &colon   &kp COMMA  &kp PERIOD   &kp P        &kp Y        &kp F      &kp G            &kp C         &kp R  &kp L
-  &kp A    &kp O      &kp E        &kp U        &kp I        &kp D      &kp H            &kp T         &kp N  &kp S
-  &kp SQT  &kp Q      &kp J        &kp K        &kp X        &kp B      &kp M            &kp W         &kp V  &kp Z
-                      &lt 4 SPACE  &lt 1 SPACE  &lt 2 TAB    &kp ENTER  &lt 3 BACKSPACE  &lt 5 DELETE
+  &colon   &kp COMMA  &kp PERIOD    &kp P        &kp Y        &kp F        &kp G            &kp C         &kp R  &kp L
+  &kp A    &kp O      &kp E         &kp U        &kp I        &kp D        &kp H            &kp T         &kp N  &kp S
+  &kp SQT  &kp Q      &kp J         &kp K        &kp X        &kp B        &kp M            &kp W         &kp V  &kp Z
+                      &lt 5 ESCAPE  &lt 1 SPACE  &lt 2 TAB    &lt 4 ENTER  &lt 3 BACKSPACE  &lt 6 DELETE
             >;
         };
 
@@ -58,10 +65,19 @@
 
         movement {
             bindings = <
-  &trans  &kp HOME        &kp UP_ARROW  &kp END    &trans    &trans  &trans     &trans     &trans    &trans
-  &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans    &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-  &trans  &trans          &trans        &trans     &trans    &trans  &trans     &trans     &trans    &trans
-                          &trans        &trans     &trans    &trans  &trans     &trans
+  &kp DELETE  &kp HOME        &kp UP_ARROW  &kp END    &kp PAGE_UP      &trans  &trans     &trans     &trans    &trans
+  &trans      &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN    &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+  &trans      &trans          &trans        &trans     &trans           &trans  &trans     &trans     &trans    &trans
+                              &trans        &trans     &trans           &trans  &trans     &trans
+            >;
+        };
+
+        functions {
+            bindings = <
+  &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12    &trans  &trans     &trans     &trans    &trans
+  &trans           &kp F4  &kp F5  &kp F6  &kp F11    &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+  &trans           &kp F1  &kp F2  &kp F3  &kp F10    &trans  &trans     &trans     &trans    &trans
+                           &trans  &trans  &trans     &trans  &trans     &trans
             >;
         };
 
@@ -71,6 +87,15 @@
   &kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &trans    &kp D   &kp H     &kp T      &kp N  &kp S
   &trans        &trans        &trans     &trans     &trans    &kp B   &kp M     &kp W      &kp V  &kp Z
                               &trans     &trans     &trans    &trans  &kp PLUS  &kp MINUS
+            >;
+        };
+
+        right_modifiers {
+            bindings = <
+  &kp SEMI  &kp COMMA  &kp DOT  &kp P      &kp Y      &trans  &trans     &trans     &trans    &trans
+  &kp A     &kp O      &kp E    &kp U      &kp I      &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+  &kp APOS  &kp TAB    &kp J    &kp K      &kp X      &trans  &trans     &trans     &trans    &trans
+                       &kp ESC  &kp SPACE  &kp TAB    &trans  &trans     &trans
             >;
         };
 
