@@ -95,7 +95,7 @@
             bindings = <
   &kp SEMI  &kp COMMA  &kp DOT  &kp P      &kp Y      &trans  &trans     &trans     &trans    &trans
   &kp A     &kp O      &kp E    &kp U      &kp I      &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-  &kp APOS  &kp TAB    &kp J    &kp K      &kp X      &trans  &trans     &trans     &trans    &trans
+  &kp APOS  &kp TAB    &kp J    &kp K      &kp X      &trans  &kp TAB    &trans     &trans    &trans
                        &kp ESC  &kp SPACE  &kp TAB    &trans  &trans     &trans
             >;
         };
