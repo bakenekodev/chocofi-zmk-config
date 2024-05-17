@@ -663,10 +663,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-  &q_grave     &cmd_w_euro     &lt 3 E             &lt 2 R                  &lt 7 T        &lt 10 Y         &lt 3 U                   &lt 2 I              &kp O            &kp P
-  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D      &shift_tap LEFT_SHIFT F  &lt 5 G        &lt 5 H          &shift_tap RIGHT_SHIFT J  &hm LEFT_GUI K       &hm RIGHT_ALT L  &hm_quotes RCTRL 0
-  &kp Z        &kp X           &kp C               &kp V                    &lt 8 B        &lt 4 N          &kp M                     &coma_semi           &dot_colon       &slashandbackslash
-                               &lt 9 LEFT_BRACKET  &hm LEFT_GUI TAB         &lt 6 SPACE    &lt 6 BACKSPACE  &lt 5 ENTER               &lt 7 RIGHT_BRACKET
+  &kp LS(SEMICOLON)  &kp COMMA  &kp PERIOD  &kp P      &kp Y      &kp F      &kp G          &kp C    &kp R  &kp L
+  &kp A              &kp O      &kp E       &kp U      &kp I      &kp D      &kp H          &kp T    &kp N  &kp S
+  &kp SQT            &kp Q      &kp J       &kp K      &kp X      &kp B      &kp M          &kp W    &kp V  &kp Z
+                                &kp ESC     &kp SPACE  &kp TAB    &kp ENTER  &kp BACKSPACE  &kp DEL
             >;
         };
 
