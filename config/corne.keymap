@@ -82,10 +82,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-  &colon                  &kp COMMA               &kp PERIOD           &kp P                     &kp Y        &kp F        &kp G                      &kp C                &kp R                    &kp L
-  &l_home_mod LEFT_WIN A  &l_home_mod LEFT_ALT O  &l_home_mod LCTRL E  &l_home_mod LEFT_SHIFT U  &kp I        &kp D        &r_home_mod RIGHT_SHIFT H  &r_home_mod RCTRL T  &r_home_mod RIGHT_ALT N  &r_home_mod RIGHT_WIN S
-  &kp SQT                 &kp Q                   &kp J                &kp K                     &kp X        &kp B        &kp M                      &kp W                &kp V                    &kp Z
-                                                  &lt 2 ESCAPE         &lt 1 SPACE               &lt 2 TAB    &lt 4 ENTER  &lt 3 BACKSPACE            &lt 6 DELETE
+  &colon                  &kp COMMA               &kp PERIOD           &kp P                     &kp Y      &kp F        &kp G                      &kp C                &kp R                    &kp L
+  &l_home_mod LEFT_WIN A  &l_home_mod LEFT_ALT O  &l_home_mod LCTRL E  &l_home_mod LEFT_SHIFT U  &kp I      &kp D        &r_home_mod RIGHT_SHIFT H  &r_home_mod RCTRL T  &r_home_mod RIGHT_ALT N  &r_home_mod RIGHT_WIN S
+  &kp SQT                 &kp Q                   &kp J                &kp K                     &kp X      &kp B        &kp M                      &kp W                &kp V                    &kp Z
+                                                  &lt 2 ESCAPE         &lt 1 SPACE               &kp TAB    &lt 4 ENTER  &lt 3 BACKSPACE            &lt 6 DELETE
             >;
         };
 
