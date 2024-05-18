@@ -20,6 +20,21 @@
             bindings = <&mo 10>;
             key-positions = <34 35>;
         };
+
+        lctrl {
+            bindings = <&kp LCTRL>;
+            key-positions = <12 13>;
+        };
+
+        lalt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <11 12>;
+        };
+
+        lwin {
+            bindings = <&kp LEFT_WIN>;
+            key-positions = <10 11>;
+        };
     };
 
     behaviors {
@@ -31,6 +46,30 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        l_home_mod: l_home_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "L_HOME_MOD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            flavor = "tap-unless-interrupted";
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 18 19 25 26 27 28 29 17 33 34 35>;
+        };
+
+        r_home_mod: r_home_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "R_HOME_MOD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            flavor = "tap-unless-interrupted";
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <0 4 10 11 12 13 14 20 21 22 23 24 30 31 32 3 2 1>;
+        };
     };
 
     keymap {
@@ -39,10 +78,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-  &colon   &kp COMMA  &kp PERIOD    &kp P        &kp Y        &kp F        &kp G            &kp C         &kp R  &kp L
-  &kp A    &kp O      &kp E         &kp U        &kp I        &kp D        &kp H            &kp T         &kp N  &kp S
-  &kp SQT  &kp Q      &kp J         &kp K        &kp X        &kp B        &kp M            &kp W         &kp V  &kp Z
-                      &lt 5 ESCAPE  &lt 1 SPACE  &lt 2 TAB    &lt 4 ENTER  &lt 3 BACKSPACE  &lt 6 DELETE
+  &colon                  &kp COMMA               &kp PERIOD           &kp P                     &kp Y        &kp F        &kp G                      &kp C                &kp R                    &kp L
+  &l_home_mod LEFT_WIN A  &l_home_mod LEFT_ALT O  &l_home_mod LCTRL E  &l_home_mod LEFT_SHIFT U  &kp I        &kp D        &r_home_mod RIGHT_SHIFT H  &r_home_mod RCTRL T  &r_home_mod RIGHT_ALT N  &r_home_mod RIGHT_WIN S
+  &kp SQT                 &kp Q                   &kp J                &kp K                     &kp X        &kp B        &kp M                      &kp W                &kp V                    &kp Z
+                                                  &lt 5 ESCAPE         &lt 1 SPACE               &lt 2 TAB    &lt 4 ENTER  &lt 3 BACKSPACE            &lt 6 DELETE
             >;
         };
 
@@ -57,10 +96,10 @@
 
         symbols {
             bindings = <
-  &trans    &trans    &trans     &trans     &trans    &kp LS(LPAR)  &kp AMPERSAND   &kp ASTERISK   &kp LS(RPAR)   &trans
-  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp LBKT      &kp LS(DOLLAR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp RBKT
-  &trans    &trans    &trans     &trans     &trans    &kp LS(LBRC)  &kp LS(EXCL)    &kp LS(AT)     &kp LS(POUND)  &kp LS(RBRC)
-                      &trans     &trans     &trans    &kp EQUAL     &kp UNDER       &kp MINUS
+  &trans    &trans    &trans     &trans     &trans    &kp LEFT_BRACKET      &kp AMPERSAND  &kp ASTERISK  &kp RIGHT_BRACKET  &trans
+  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp LEFT_PARENTHESIS  &kp DOLLAR     &kp PERCENT   &kp CARET          &kp RIGHT_PARENTHESIS
+  &trans    &trans    &trans     &trans     &trans    &kp LEFT_BRACE        &kp EXCL       &kp AT        &kp HASH           &kp RIGHT_BRACE
+                      &trans     &trans     &trans    &kp EQUAL             &kp UNDER      &kp MINUS
             >;
         };
 
