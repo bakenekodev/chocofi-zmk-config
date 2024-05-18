@@ -85,15 +85,15 @@
   &colon                  &kp COMMA               &kp PERIOD           &kp P                     &kp Y        &kp F        &kp G                      &kp C                &kp R                    &kp L
   &l_home_mod LEFT_WIN A  &l_home_mod LEFT_ALT O  &l_home_mod LCTRL E  &l_home_mod LEFT_SHIFT U  &kp I        &kp D        &r_home_mod RIGHT_SHIFT H  &r_home_mod RCTRL T  &r_home_mod RIGHT_ALT N  &r_home_mod RIGHT_WIN S
   &kp SQT                 &kp Q                   &kp J                &kp K                     &kp X        &kp B        &kp M                      &kp W                &kp V                    &kp Z
-                                                  &lt 5 ESCAPE         &lt 1 SPACE               &lt 2 TAB    &lt 4 ENTER  &lt 3 BACKSPACE            &lt 6 DELETE
+                                                  &lt 2 ESCAPE         &lt 1 SPACE               &lt 2 TAB    &lt 4 ENTER  &lt 3 BACKSPACE            &lt 6 DELETE
             >;
         };
 
         numbers {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans        &kp N7        &kp N8        &kp N9        &trans
-  &trans  &trans  &trans  &trans  &trans    &trans        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans
-  &trans  &trans  &trans  &trans  &trans    &kp NUMBER_1  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
+  &trans  &trans  &trans  &trans  &trans    &kp QUESTION  &kp N7        &kp N8        &kp N9        &trans
+  &trans  &trans  &trans  &trans  &trans    &kp EQUAL     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS
+  &trans  &trans  &trans  &trans  &trans    &kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS
                   &trans  &trans  &trans    &trans        &kp N0        &kp PERIOD
             >;
         };
