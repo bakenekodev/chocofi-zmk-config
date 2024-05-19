@@ -94,7 +94,7 @@
   &trans    &trans    &trans     &trans     &trans    &kp LEFT_BRACKET      &kp AMPERSAND  &kp ASTERISK  &kp PLUS    &kp RIGHT_BRACKET
   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp LEFT_PARENTHESIS  &kp EQUAL      &kp PERCENT   &kp DOLLAR  &kp RIGHT_PARENTHESIS
   &trans    &trans    &trans     &trans     &trans    &kp LEFT_BRACE        &kp EXCL       &kp AT        &kp HASH    &kp RIGHT_BRACE
-                      &trans     &trans     &trans    &colon                &kp UNDER      &kp MINUS
+                      &trans     &trans     &trans    &kp MINUS             &kp UNDER      &colon
             >;
         };
 
