@@ -17,7 +17,7 @@
         compatible = "zmk,combos";
 
         other {
-            bindings = <&mo 10>;
+            bindings = <&mo 6>;
             key-positions = <34 35>;
         };
 
@@ -85,7 +85,7 @@
   &colon                  &kp COMMA               &kp PERIOD           &kp P                     &kp Y        &kp F        &kp G                      &kp C                &kp R                    &kp L
   &l_home_mod LEFT_WIN A  &l_home_mod LEFT_ALT O  &l_home_mod LCTRL E  &l_home_mod LEFT_SHIFT U  &kp I        &kp D        &r_home_mod RIGHT_SHIFT H  &r_home_mod RCTRL T  &r_home_mod RIGHT_ALT N  &r_home_mod RIGHT_WIN S
   &kp SQT                 &kp Q                   &kp J                &kp K                     &kp X        &kp B        &kp M                      &kp W                &kp V                    &kp Z
-                                                  &kp ESCAPE           &lt 1 SPACE               &lt 2 TAB    &lt 4 ENTER  &lt 3 BACKSPACE            &lt 6 DELETE
+                                                  &kp ESCAPE           &lt 1 SPACE               &lt 2 TAB    &lt 5 ENTER  &lt 4 BACKSPACE            &kp DEL
             >;
         };
 
@@ -100,19 +100,28 @@
 
         numbers {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &kp QUESTION  &kp N7        &kp N8        &kp N9        &kp BACKSLASH
-  &trans  &trans  &trans  &trans  &trans    &kp CARET     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SLASH
-  &trans  &trans  &trans  &trans  &trans    &kp UNDER     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS
-                  &trans  &trans  &trans    &kp TILDE     &kp N0        &kp PERIOD
+  &trans  &trans  &trans  &trans  &trans    &kp CARET     &kp N7        &kp N8        &kp N9        &kp BACKSLASH
+  &trans  &trans  &trans  &trans  &trans    &kp QUESTION  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SLASH
+  &trans  &trans  &trans  &trans  &trans    &kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp TILDE
+                  &trans  &trans  &trans    &kp GRAVE     &kp N0        &kp PERIOD
+            >;
+        };
+
+        symbols2 {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &kp QUESTION  &kp COLON     &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans        &kp QUESTION  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans        &trans        &trans
             >;
         };
 
         movement {
             bindings = <
-  &kp DELETE  &kp HOME        &kp UP_ARROW  &kp END    &kp PAGE_UP      &trans  &trans     &trans     &trans    &trans
+  &kp DELETE  &kp HOME        &kp UP_ARROW  &kp END    &kp PAGE_UP      &trans  &trans     &trans     &kp DEL   &trans
   &trans      &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN    &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
   &trans      &trans          &trans        &trans     &trans           &trans  &trans     &trans     &trans    &trans
-                              &trans        &trans     &trans           &trans  &trans     &trans
+                              &trans        &kp ESC    &trans           &trans  &trans     &trans
             >;
         };
 
@@ -125,57 +134,11 @@
             >;
         };
 
-        left_modifiers {
-            bindings = <
-  &trans        &trans        &trans     &trans     &trans    &kp F   &kp G     &kp C      &kp R  &kp L
-  &kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &trans    &kp D   &kp H     &kp T      &kp N  &kp S
-  &trans        &trans        &trans     &trans     &trans    &kp B   &kp M     &kp W      &kp V  &kp Z
-                              &trans     &trans     &trans    &trans  &kp PLUS  &kp MINUS
-            >;
-        };
-
-        right_modifiers {
-            bindings = <
-  &kp SEMI  &kp COMMA  &kp DOT  &kp P      &kp Y      &trans  &trans     &trans     &trans    &trans
-  &kp A     &kp O      &kp E    &kp U      &kp I      &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-  &kp APOS  &kp TAB    &kp J    &kp K      &kp X      &trans  &kp TAB    &trans     &trans    &trans
-                       &kp ESC  &kp SPACE  &kp TAB    &trans  &trans     &trans
-            >;
-        };
-
-        default_mac {
-            label = "mac";
-            bindings = <
-  &colon   &kp COMMA  &kp PERIOD    &kp P        &kp Y        &kp F        &kp G            &kp C         &kp R  &kp L
-  &kp A    &kp O      &kp E         &kp U        &kp I        &kp D        &kp H            &kp T         &kp N  &kp S
-  &kp SQT  &kp Q      &kp J         &kp K        &kp X        &kp B        &kp M            &kp W         &kp V  &kp Z
-                      &lt 8 ESCAPE  &lt 2 SPACE  &lt 1 TAB    &lt 4 ENTER  &lt 3 BACKSPACE  &lt 9 DELETE
-            >;
-        };
-
-        mac_left_modifiers {
-            bindings = <
-  &trans    &trans     &trans    &trans     &trans    &kp F   &kp G     &kp C      &kp R  &kp L
-  &kp LALT  &kp LCTRL  &kp LGUI  &kp LSHFT  &trans    &kp D   &kp H     &kp T      &kp N  &kp S
-  &trans    &trans     &trans    &trans     &trans    &kp B   &kp M     &kp W      &kp V  &kp Z
-                       &trans    &trans     &trans    &trans  &kp PLUS  &kp MINUS
-            >;
-        };
-
-        mac_right_modifiers {
-            bindings = <
-  &kp SEMI  &kp COMMA  &kp DOT  &kp P      &kp Y      &trans  &trans     &trans    &trans    &trans
-  &kp A     &kp O      &kp E    &kp U      &kp I      &trans  &kp LSHFT  &kp LGUI  &kp CAPS  &kp LALT
-  &kp APOS  &kp TAB    &kp J    &kp K      &kp X      &trans  &trans     &trans    &trans    &trans
-                       &kp ESC  &kp SPACE  &kp TAB    &trans  &trans     &trans
-            >;
-        };
-
         other {
             bindings = <
-  &to 7           &to 0   &trans        &bt BT_SEL 2  &bt BT_SEL 3    &trans  &trans  &trans  &trans  &soft_off
+  &trans          &trans  &trans        &bt BT_SEL 2  &bt BT_SEL 3    &trans  &trans  &trans  &trans  &soft_off
   &trans          &trans  &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans
-  &bt BT_CLR_ALL  &trans  &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans
+  &bt BT_CLR_ALL  &trans  &bt BT_SEL 2  &bt BT_SEL 3  &trans          &trans  &trans  &trans  &trans  &trans
                           &bt BT_SEL 0  &bt BT_SEL 1  &trans          &trans  &trans  &trans
             >;
         };
