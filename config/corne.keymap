@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT_L 0
 
@@ -17,7 +18,7 @@
         compatible = "zmk,combos";
 
         other {
-            bindings = <&mo 6>;
+            bindings = <&mo 5>;
             key-positions = <34 35>;
         };
 
@@ -85,34 +86,25 @@
   &colon                  &kp COMMA               &kp PERIOD           &kp P                     &kp Y        &kp F        &kp G                      &kp C                &kp R                    &kp L
   &l_home_mod LEFT_WIN A  &l_home_mod LEFT_ALT O  &l_home_mod LCTRL E  &l_home_mod LEFT_SHIFT U  &kp I        &kp D        &r_home_mod RIGHT_SHIFT H  &r_home_mod RCTRL T  &r_home_mod RIGHT_ALT N  &r_home_mod RIGHT_WIN S
   &kp SQT                 &kp Q                   &kp J                &kp K                     &kp X        &kp B        &kp M                      &kp W                &kp V                    &kp Z
-                                                  &kp ESCAPE           &lt 1 SPACE               &lt 2 TAB    &lt 5 ENTER  &lt 4 BACKSPACE            &kp DEL
+                                                  &kp ESCAPE           &lt 1 SPACE               &lt 2 TAB    &lt 4 ENTER  &lt 3 BACKSPACE            &kp DEL
             >;
         };
 
         symbols {
             bindings = <
-  &trans    &trans    &trans     &trans     &trans    &kp LEFT_BRACKET      &kp AMPERSAND  &kp ASTERISK  &kp PLUS    &kp RIGHT_BRACKET
-  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp LEFT_PARENTHESIS  &kp EQUAL      &kp PERCENT   &kp DOLLAR  &kp RIGHT_PARENTHESIS
-  &trans    &trans    &trans     &trans     &trans    &kp LEFT_BRACE        &kp EXCL       &kp AT        &kp HASH    &kp RIGHT_BRACE
-                      &trans     &trans     &trans    &kp MINUS             &kp UNDER      &colon
+  &trans    &trans     &trans     &trans     &trans    &kp LEFT_BRACKET      &kp AMPERSAND  &kp ASTERISK  &kp PLUS    &kp RIGHT_BRACKET
+  &kp LGUI  &kp LALT   &kp LCTRL  &kp LSHFT  &trans    &kp LEFT_PARENTHESIS  &kp EQUAL      &kp PERCENT   &kp DOLLAR  &kp RIGHT_PARENTHESIS
+  &trans    &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans    &kp LEFT_BRACE        &kp EXCL       &kp AT        &kp HASH    &kp RIGHT_BRACE
+                       &trans     &trans     &trans    &kp MINUS             &kp UNDER      &colon
             >;
         };
 
         numbers {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &kp CARET     &kp N7        &kp N8        &kp N9        &kp BACKSLASH
-  &trans  &trans  &trans  &trans  &trans    &kp QUESTION  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SLASH
-  &trans  &trans  &trans  &trans  &trans    &kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp TILDE
-                  &trans  &trans  &trans    &kp GRAVE     &kp N0        &kp PERIOD
-            >;
-        };
-
-        symbols2 {
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &kp QUESTION  &kp COLON     &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans        &kp QUESTION  &trans  &trans  &trans
-                  &trans  &trans  &trans    &trans        &trans        &trans
+  &trans    &trans    &trans     &trans     &trans    &kp CARET     &kp N7        &kp N8        &kp N9        &kp BACKSLASH
+  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp QUESTION  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SLASH
+  &trans    &trans    &trans     &trans     &trans    &kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp TILDE
+                      &trans     &trans     &trans    &kp GRAVE     &kp N0        &kp PERIOD
             >;
         };
 
