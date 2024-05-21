@@ -18,7 +18,7 @@
         compatible = "zmk,combos";
 
         other {
-            bindings = <&mo 5>;
+            bindings = <&mo 6>;
             key-positions = <34 35>;
         };
 
@@ -86,13 +86,13 @@
   &colon                  &kp COMMA               &kp PERIOD           &kp P                     &kp Y        &kp F        &kp G                      &kp C                &kp R                    &kp L
   &l_home_mod LEFT_WIN A  &l_home_mod LEFT_ALT O  &l_home_mod LCTRL E  &l_home_mod LEFT_SHIFT U  &kp I        &kp D        &r_home_mod RIGHT_SHIFT H  &r_home_mod RCTRL T  &r_home_mod RIGHT_ALT N  &r_home_mod RIGHT_WIN S
   &kp SQT                 &kp Q                   &kp J                &kp K                     &kp X        &kp B        &kp M                      &kp W                &kp V                    &kp Z
-                                                  &kp ESCAPE           &lt 1 SPACE               &lt 2 TAB    &lt 4 ENTER  &lt 3 BACKSPACE            &kp DEL
+                                                  &lt 5 ESC            &lt 1 SPACE               &lt 2 TAB    &lt 4 ENTER  &lt 3 BACKSPACE            &kp DEL
             >;
         };
 
         symbols {
             bindings = <
-  &trans    &trans     &trans     &trans     &trans    &kp LEFT_BRACKET      &kp AMPERSAND  &kp ASTERISK  &kp PLUS    &kp RIGHT_BRACKET
+  &trans    &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans    &kp LEFT_BRACKET      &kp AMPERSAND  &kp ASTERISK  &kp PLUS    &kp RIGHT_BRACKET
   &kp LGUI  &kp LALT   &kp LCTRL  &kp LSHFT  &trans    &kp LEFT_PARENTHESIS  &kp EQUAL      &kp PERCENT   &kp DOLLAR  &kp RIGHT_PARENTHESIS
   &trans    &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans    &kp LEFT_BRACE        &kp EXCL       &kp AT        &kp HASH    &kp RIGHT_BRACE
                        &trans     &trans     &trans    &kp MINUS             &kp UNDER      &colon
@@ -123,6 +123,15 @@
   &kp CAPS         &kp F4  &kp F5  &kp F6  &kp F11    &kp C_PLAY_PAUSE  &kp LSHFT     &kp LCTRL     &kp LALT    &kp LGUI
   &trans           &kp F1  &kp F2  &kp F3  &kp F10    &kp C_MUTE        &trans        &trans        &trans      &trans
                            &trans  &trans  &trans     &trans            &trans        &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
+                     &trans     &trans     &trans    &trans  &trans  &trans
             >;
         };
 
