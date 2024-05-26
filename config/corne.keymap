@@ -92,9 +92,9 @@
 
         symbols {
             bindings = <
-  &trans    &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans    &kp LEFT_BRACKET      &kp AMPERSAND  &kp ASTERISK  &kp PLUS    &kp RIGHT_BRACKET
+  &trans    &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans    &kp LEFT_BRACE        &kp AMPERSAND  &kp ASTERISK  &kp PLUS    &kp RIGHT_BRACE
   &kp LGUI  &kp LALT   &kp LCTRL  &kp LSHFT  &trans    &kp LEFT_PARENTHESIS  &kp EQUAL      &kp PERCENT   &kp DOLLAR  &kp RIGHT_PARENTHESIS
-  &trans    &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans    &kp LEFT_BRACE        &kp EXCL       &kp AT        &kp HASH    &kp RIGHT_BRACE
+  &trans    &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans    &kp LEFT_BRACKET      &kp EXCL       &kp AT        &kp HASH    &kp RIGHT_BRACKET
                        &trans     &trans     &trans    &kp MINUS             &kp UNDER      &colon
             >;
         };
