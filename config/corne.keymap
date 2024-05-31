@@ -24,17 +24,32 @@
 
         lctrl {
             bindings = <&kp LCTRL>;
-            key-positions = <12 13>;
+            key-positions = <13 23>;
         };
 
         lalt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <11 12>;
+            key-positions = <12 13>;
         };
 
         lwin {
             bindings = <&kp LEFT_WIN>;
-            key-positions = <10 11>;
+            key-positions = <11 12>;
+        };
+
+        rctrl {
+            bindings = <&kp LCTRL>;
+            key-positions = <16 26>;
+        };
+
+        ralt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <16 17>;
+        };
+
+        rwin {
+            bindings = <&kp LEFT_WIN>;
+            key-positions = <17 18>;
         };
     };
 
@@ -83,10 +98,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-  &kp SLASH               &kp COMMA               &kp PERIOD           &kp P                     &kp Y        &kp F        &kp G                      &kp C                &kp R                    &kp L
-  &l_home_mod LEFT_WIN A  &l_home_mod LEFT_ALT O  &l_home_mod LCTRL E  &l_home_mod LEFT_SHIFT U  &kp I        &kp D        &r_home_mod RIGHT_SHIFT H  &r_home_mod RCTRL T  &r_home_mod RIGHT_ALT N  &r_home_mod RIGHT_WIN S
-  &kp SQT                 &kp Q                   &kp J                &kp K                     &kp X        &kp B        &kp M                      &kp W                &kp V                    &kp Z
-                                                  &lt 5 ESC            &lt 1 SPACE               &lt 2 TAB    &lt 4 ENTER  &lt 3 BACKSPACE            &kp DEL
+  &kp SLASH  &kp COMMA  &kp PERIOD  &kp P        &kp Y        &kp F        &kp G            &kp C            &kp R  &kp L
+  &kp A      &kp O      &kp E       &kp U        &kp I        &kp D        &kp H            &kp T            &kp N  &kp S
+  &kp SQT    &kp Q      &kp J       &kp K        &kp X        &kp B        &kp M            &kp W            &kp V  &kp Z
+                        &lt 5 ESC   &lt 1 SPACE  &lt 2 TAB    &lt 4 ENTER  &lt 3 BACKSPACE  &kp RIGHT_SHIFT
             >;
         };
 
