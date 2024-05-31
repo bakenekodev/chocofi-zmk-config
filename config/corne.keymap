@@ -24,32 +24,42 @@
 
         lctrl {
             bindings = <&kp LCTRL>;
-            key-positions = <13 23>;
+            key-positions = <30 12>;
         };
 
         lalt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <12 13>;
+            key-positions = <11 30>;
         };
 
         lwin {
             bindings = <&kp LEFT_WIN>;
-            key-positions = <11 12>;
+            key-positions = <10 30>;
         };
 
         rctrl {
             bindings = <&kp LCTRL>;
-            key-positions = <16 26>;
+            key-positions = <35 17>;
         };
 
         ralt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <16 17>;
+            key-positions = <18 35>;
         };
 
         rwin {
             bindings = <&kp LEFT_WIN>;
-            key-positions = <17 18>;
+            key-positions = <19 35>;
+        };
+
+        lshift {
+            bindings = <&kp LSHIFT>;
+            key-positions = <13 30>;
+        };
+
+        rshift {
+            bindings = <&kp LSHIFT>;
+            key-positions = <35 16>;
         };
     };
 
