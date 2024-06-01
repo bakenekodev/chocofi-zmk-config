@@ -53,82 +53,82 @@
         };
 
         lshift {
-            bindings = <&kp LA(LS(LSHIFT))>;
+            bindings = <&kp LSHIFT>;
             key-positions = <13 31>;
         };
 
         rshift {
-            bindings = <&kp LA(LSHIFT)>;
+            bindings = <&kp LSHIFT>;
             key-positions = <16 34>;
         };
 
         lshift+lctrl {
-            bindings = <&kp LS(LCTRL)>;
+            bindings = <&kp LS(LC(LCTRL))>;
             key-positions = <13 12 31>;
         };
 
         rshift+rctrl {
-            bindings = <&kp LS(LCTRL)>;
+            bindings = <&kp LS(LC(LCTRL))>;
             key-positions = <16 17 34>;
         };
 
         lctrl+lalt {
-            bindings = <&kp LC(LEFT_ALT)>;
+            bindings = <&kp LC(LA(LEFT_ALT))>;
             key-positions = <11 12 31>;
         };
 
         rctrl+ralt {
-            bindings = <&kp LC(LEFT_ALT)>;
+            bindings = <&kp LC(LA(LEFT_ALT))>;
             key-positions = <17 18 34>;
         };
 
         lwin+lalt {
-            bindings = <&kp LA(LEFT_WIN)>;
+            bindings = <&kp LA(LG(LEFT_WIN))>;
             key-positions = <10 11 31>;
         };
 
         rwin+ralt {
-            bindings = <&kp LA(LEFT_WIN)>;
+            bindings = <&kp LA(LG(LEFT_WIN))>;
             key-positions = <34 18 19>;
         };
 
         lshift+lalt+lctrl {
-            bindings = <&kp LS(LA(LCTRL))>;
+            bindings = <&kp LS(LA(LC(LCTRL)))>;
             key-positions = <13 12 31 11>;
         };
 
         rshift+ralt+rctrl {
-            bindings = <&kp LS(LA(LCTRL))>;
+            bindings = <&kp LS(LA(LC(LCTRL)))>;
             key-positions = <16 17 18 34>;
         };
 
         lctrl+lwin {
-            bindings = <&kp LC(LEFT_WIN)>;
+            bindings = <&kp LC(LG(LEFT_WIN))>;
             key-positions = <10 31 12>;
         };
 
         rctrl+rwin {
-            bindings = <&kp LC(LEFT_WIN)>;
+            bindings = <&kp LC(LG(LEFT_WIN))>;
             key-positions = <17 19 34>;
         };
 
         lalt+lshift {
-            bindings = <&kp LA(LEFT_SHIFT)>;
+            bindings = <&kp LA(LS(LEFT_SHIFT))>;
             key-positions = <31 11 13>;
         };
 
         ralt+rshift {
-            bindings = <&kp LA(LEFT_SHIFT)>;
+            bindings = <&kp LA(LS(LEFT_SHIFT))>;
             key-positions = <16 18 34>;
         };
 
         lwin+lshift {
-            bindings = <&kp LG(LEFT_SHIFT)>;
+            bindings = <&kp LG(LS(LEFT_SHIFT))>;
             key-positions = <31 13 10>;
         };
 
         rwin+rshift {
-            bindings = <&kp LG(LEFT_SHIFT)>;
+            bindings = <&kp LG(LS(LEFT_SHIFT))>;
             key-positions = <16 19 34>;
         };
     };
