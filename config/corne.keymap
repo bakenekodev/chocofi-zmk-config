@@ -53,7 +53,7 @@
         };
 
         lshift {
-            bindings = <&kp LSHIFT>;
+            bindings = <&kp LA(LS(LSHIFT))>;
             key-positions = <13 31>;
         };
 
