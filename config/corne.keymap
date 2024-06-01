@@ -68,7 +68,7 @@
         };
 
         rshift+rctrl {
-            bindings = <&kp LS(LC(LCTRL))>;
+            bindings = <&kp RS(RC(RCTRL))>;
             key-positions = <16 17 34>;
         };
 
