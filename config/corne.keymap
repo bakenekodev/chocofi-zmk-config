@@ -58,7 +58,7 @@
         };
 
         rshift {
-            bindings = <&kp LSHIFT>;
+            bindings = <&kp LA(LSHIFT)>;
             key-positions = <16 34>;
         };
 
